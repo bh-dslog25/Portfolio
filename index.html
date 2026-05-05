@@ -1,108 +1,107 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Data Science Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <style>
-    * { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif; }
-    body { background:#0f172a; color:#e2e8f0; }
-
-    header { position:fixed; width:100%; top:0; background:#020617; padding:15px 40px; }
-    nav { display:flex; justify-content:space-between; align-items:center; }
-    nav ul { list-style:none; display:flex; gap:20px; }
-    nav a { color:#e2e8f0; text-decoration:none; font-size:14px; }
-
-    section { padding:100px 40px; max-width:1100px; margin:auto; }
-
-    .hero { height:100vh; display:flex; flex-direction:column; justify-content:center; }
-    .hero h1 { font-size:48px; }
-    .hero span { color:#38bdf8; }
-
-    .btn { margin-top:20px; padding:10px 20px; background:#38bdf8; border:none; cursor:pointer; }
-
-    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
-
-    .card { background:#020617; padding:20px; border-radius:10px; transition:0.3s; }
-    .card:hover { transform:translateY(-5px); }
-
-    h2 { margin-bottom:20px; }
-
-    footer { text-align:center; padding:20px; background:#020617; }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="min-h-screen bg-gradient-to-br from-sky-100 via-blue-100 to-indigo-100 p-4 sm:p-6">
 
-<header>
-  <nav>
-    <h3>Data Portfolio</h3>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+  <div class="max-w-5xl mx-auto space-y-6">
 
-<section class="hero">
-  <h1>Hi, I'm <span>Long</span></h1>
-  <p>Data Science | Machine Learning | Python</p>
-  <button class="btn" onclick="scrollToSection('projects')">View Projects</button>
-</section>
+    <!-- HERO -->
+    <div class="relative rounded-2xl overflow-hidden shadow-md border border-blue-100">
+      <div class="h-40 sm:h-52 w-full">
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1400&auto=format&fit=crop" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-t from-blue-900/40 to-transparent"></div>
+      </div>
 
-<section id="about">
-  <h2>About Me</h2>
-  <p>Tôi là Data Science, tập trung vào phân tích dữ liệu, machine learning và xây dựng mô hình dự đoán. Thành thạo Python, Pandas, và các thư viện ML.</p>
-</section>
+      <div class="absolute -bottom-12 left-6 flex items-end gap-4">
+        <img src="https://via.placeholder.com/120" class="w-24 h-24 sm:w-28 sm:h-28 rounded-full border-4 border-white shadow-lg object-cover" />
+        <div class="mb-3 text-white drop-shadow">
+          <h1 class="text-xl sm:text-2xl font-bold">Your Name</h1>
+          <p class="text-sm opacity-90">Data Analyst / Data Science</p>
+        </div>
+      </div>
+    </div>
 
-<section id="skills">
-  <h2>Skills</h2>
-  <div class="grid">
-    <div class="card">Python, Pandas, NumPy</div>
-    <div class="card">Machine Learning (Scikit-learn)</div>
-    <div class="card">Data Visualization (Matplotlib, Seaborn)</div>
-    <div class="card">SQL, Data Cleaning</div>
+    <!-- ABOUT + CONTACT -->
+    <section class="bg-white/80 backdrop-blur rounded-2xl shadow-md p-6 pt-16 border border-blue-100">
+      <h2 class="text-2xl font-bold mb-2 text-blue-700">About</h2>
+      <p class="text-gray-600 mb-4">
+        Data Analyst / Data Science enthusiast with strong interest in finance, machine learning and real-world data problems.
+      </p>
+
+      <div class="border-t pt-4 mt-4 text-sm text-gray-700 space-y-1">
+        <h3 class="font-semibold text-blue-600">Contact</h3>
+        <p>Email: your@email.com</p>
+        <p>LinkedIn: linkedin.com/in/yourname</p>
+        <p>GitHub: github.com/yourname</p>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="bg-white/80 backdrop-blur rounded-2xl shadow-md p-6 border border-blue-100">
+      <h2 class="text-2xl font-bold mb-4 text-blue-700">Projects</h2>
+      <div class="grid sm:grid-cols-1 md:grid-cols-2 gap-4">
+
+        <div class="border border-blue-100 rounded-xl overflow-hidden hover:shadow-xl hover:-translate-y-1 transition">
+          <img src="https://via.placeholder.com/400x200" class="w-full h-40 object-cover" />
+          <div class="p-4">
+            <h3 class="font-semibold text-blue-800">Ferrari Stock Analysis</h3>
+            <p class="text-sm text-gray-500">Time series + alpha signals + backtesting</p>
+            <a href="#" class="text-blue-600 text-sm mt-2 inline-block hover:underline">View GitHub →</a>
+          </div>
+        </div>
+
+        <div class="border border-blue-100 rounded-xl overflow-hidden hover:shadow-xl hover:-translate-y-1 transition">
+          <img src="https://via.placeholder.com/400x200" class="w-full h-40 object-cover" />
+          <div class="p-4">
+            <h3 class="font-semibold text-blue-800">E-commerce Analytics</h3>
+            <p class="text-sm text-gray-500">Customer behavior + conversion funnel</p>
+            <a href="#" class="text-blue-600 text-sm mt-2 inline-block hover:underline">View GitHub →</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="bg-white/80 backdrop-blur rounded-2xl shadow-md p-6 border border-blue-100">
+      <h2 class="text-2xl font-bold mb-4 text-blue-700">Skills</h2>
+
+      <div class="flex flex-wrap gap-2 mb-4" id="skills"></div>
+
+      <div id="skill-desc" class="p-3 bg-blue-50 border border-blue-100 rounded hidden"></div>
+    </section>
+
   </div>
-</section>
 
-<section id="projects">
-  <h2>Projects</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Sales Prediction</h3>
-      <p>Dự đoán doanh thu bằng Linear Regression</p>
-      <p><b>Tech:</b> Python, Pandas</p>
-    </div>
-    <div class="card">
-      <h3>Customer Segmentation</h3>
-      <p>Phân cụm khách hàng bằng K-Means</p>
-      <p><b>Tech:</b> Scikit-learn</p>
-    </div>
-    <div class="card">
-      <h3>Spam Detection</h3>
-      <p>Phân loại email spam bằng NLP</p>
-      <p><b>Tech:</b> NLP, Naive Bayes</p>
-    </div>
-  </div>
-</section>
+  <script>
+    const skills = [
+      { name: "Python", desc: "Data analysis, ML, backtesting pipelines" },
+      { name: "SQL", desc: "Data querying, analytics, data modeling" },
+      { name: "Machine Learning", desc: "Regression, classification, feature engineering" },
+      { name: "Data Visualization", desc: "Matplotlib, Tableau, storytelling" },
+    ];
 
-<section id="contact">
-  <h2>Contact</h2>
-  <p>Email: yourmail@gmail.com</p>
-  <p>GitHub: github.com/yourname</p>
-</section>
+    const skillsContainer = document.getElementById("skills");
+    const descBox = document.getElementById("skill-desc");
 
-<footer>
-  <p>© 2026 Data Portfolio</p>
-</footer>
+    skills.forEach(skill => {
+      const btn = document.createElement("button");
+      btn.innerText = skill.name;
+      btn.className = "px-3 py-1 bg-blue-100 text-blue-700 rounded-full hover:bg-blue-200 transition";
 
-<script>
-  function scrollToSection(id) {
-    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
-  }
-</script>
+      btn.onclick = () => {
+        descBox.classList.remove("hidden");
+        descBox.innerHTML = `<strong class='text-blue-700'>${skill.name}:</strong> ${skill.desc}`;
+      };
+
+      skillsContainer.appendChild(btn);
+    });
+  </script>
 
 </body>
 </html>
